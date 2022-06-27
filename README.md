@@ -21,11 +21,6 @@ It uses the OpenWeather API free plan.
 
 - Make it change theme with local time (day / night).
 
-- Clean the code a bit more and optimize the sorting of pokemons.
-
-- Add a search option, it should be easy.
-
-
 
 ## Lessons Learned:
 
