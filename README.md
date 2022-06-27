@@ -6,7 +6,7 @@ Made using OpenWeather API https://openweathermap.org/
 
 Live demo at: https://react-my-weather-app.herokuapp.com/
 
-![Image text](../src/../openweather/src/assets/img/screenshot.png) 
+![Image text](./src/assets/img/screenshot.png) 
 
 ## How It's Made:
 
