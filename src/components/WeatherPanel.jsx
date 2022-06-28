@@ -4,7 +4,7 @@ import Card from './Card';
 const WeatherPanel = () => {
 
     // Enter yout OpenWeather API here
-    let openWeatherApi = 'cf6dfe9efc1682d27c06de53e3233239'
+    let openWeatherApi = ''
     let openWeatherLang = 'en'
     let urlWeather = `https://api.openweathermap.org/data/2.5/weather?appid=${openWeatherApi}&lang=${openWeatherLang}`;
     let cityUrl = '&q=';
