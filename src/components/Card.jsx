@@ -43,7 +43,7 @@ const Card = ({loadingData, showData, weather, forecast,imgCity}) => {
             {
                 showData === true ? (
                     <div className="container">
-                        <div className="card mb-3 mx-auto bg-dark text-light">
+                        <div className="card mb-5 mx-auto bg-dark text-light">
                             <div className="row g-0">
                                 <div className="col-md-4">
                                     <h3 className="card-title">{weather.name}</h3>
