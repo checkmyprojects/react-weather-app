@@ -5,7 +5,7 @@ const Form = ({newLocation}) =>{
 
     const onSubmit = e => {
         e.preventDefault();
-        console.log({city});
+        //console.log({city});
         if(city === '' || !city) return;
 
         newLocation(city);
