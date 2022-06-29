@@ -17,6 +17,8 @@ const WeatherPanel = () => {
     const [show, setShow] = useState(false);
     const [location, setLocation] = useState('');
     const [imgCity, setImgCity] = useState('');
+    const [imgAuthor, setimgAuthor] = useState('');
+    const [urlAuthor, seturlAuthor] = useState('');
 
     const getLocation = async(loc) =>{
         setLoading(true);
@@ -77,10 +79,14 @@ const WeatherPanel = () => {
             if(!response.ok) throw {response}
             return response.json();
         }).then((pexelsData) => {     
+            console.log(pexelsData);
             // If pexels has an image(length > 0), get a random image from the array of images
             if(pexelsData.photos.length > 0){
                 const randomNumber = Math.floor(Math.random() * (pexelsData.photos.length - 1));
                 setImgCity(pexelsData.photos[randomNumber].src.portrait)
+                console.log(pexelsData.photos[randomNumber].photographer);
+                setimgAuthor(pexelsData.photos[randomNumber].photographer)
+                seturlAuthor(pexelsData.photos[randomNumber].photographer_url)
             }else{
                 // If search returns 0 images, get a random one from the list
                 setImgCity(imgBg())
@@ -124,6 +130,8 @@ const WeatherPanel = () => {
                 weather = {weather}
                 forecast = {forecast}
                 imgCity = {imgCity}
+                imgAuthor = {imgAuthor}
+                urlAuthor = {urlAuthor}
             />
 
         </React.Fragment>

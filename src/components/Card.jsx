@@ -1,7 +1,7 @@
 import React from "react";
 import Spinner from './Spinner'
 
-const Card = ({loadingData, showData, weather, forecast,imgCity}) => {
+const Card = ({loadingData, showData, weather, forecast, imgCity, imgAuthor, urlAuthor}) => {
     
     let today = new Date();
     let day = today.getDate();
@@ -36,7 +36,7 @@ const Card = ({loadingData, showData, weather, forecast,imgCity}) => {
         forecastDate6 = forecast.list[2].dt_txt.substring(8, 10) + '/' + forecast.list[2].dt_txt.substring(5, 7) + '/' + forecast.list[2].dt_txt.substring(0, 4) + ' ' + forecast.list[2].dt_txt.substring(11, 13);
         forecastDate9 = forecast.list[3].dt_txt.substring(8, 10) + '/' + forecast.list[3].dt_txt.substring(5, 7) + '/' + forecast.list[3].dt_txt.substring(0, 4) + ' ' + forecast.list[3].dt_txt.substring(11, 13);
     }
-
+console.log('Author url: ' + urlAuthor);
     return (
         <div className="mt-5">
             
@@ -91,6 +91,7 @@ const Card = ({loadingData, showData, weather, forecast,imgCity}) => {
 
                                 </div>
                             </div>
+                        <div className="text-light mb-1 mt-1">Photo by <a href={urlAuthor}>{imgAuthor}</a></div>
                         </div>
                     </div>
                 ):(
