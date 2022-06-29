@@ -86,7 +86,7 @@ const WeatherPanel = () => {
                 setImgCity(pexelsData.photos[randomNumber].src.portrait)
                 console.log(pexelsData.photos[randomNumber].photographer);
                 setimgAuthor(pexelsData.photos[randomNumber].photographer)
-                seturlAuthor(pexelsData.photos[randomNumber].photographer_url)
+                seturlAuthor(pexelsData.photos[randomNumber].url)
             }else{
                 // If search returns 0 images, get a random one from the list
                 setImgCity(imgBg())
