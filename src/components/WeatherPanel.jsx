@@ -90,6 +90,8 @@ const WeatherPanel = () => {
             }else{
                 // If search returns 0 images, get a random one from the list
                 setImgCity(imgBg())
+                setimgAuthor('Pexels')
+                seturlAuthor('https://www.pexels.com/')
             }
 
         }).catch(error => {
