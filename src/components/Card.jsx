@@ -91,7 +91,7 @@ const Card = ({loadingData, showData, weather, forecast, imgCity, imgAuthor, url
 
                                 </div>
                             </div>
-                        <div className="text-light mb-1 mt-1">Photo by <a href={urlAuthor}>{imgAuthor}</a></div>
+                        <div className="text-light mb-1 mt-1">Photo by <a target="_blank" href={urlAuthor} rel="noreferrer">{imgAuthor}</a></div>
                         </div>
                     </div>
                 ):(
