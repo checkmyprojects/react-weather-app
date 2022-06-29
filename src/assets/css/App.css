@@ -20,12 +20,14 @@ body{
 .card-title{
   position: absolute;
   padding: 20px;
+  /* mix-blend-mode: exclusion; */
 }
 
 .card-date{
   position: absolute;
   padding-left: 20px;
   margin-top: 60px;
+  /* mix-blend-mode: exclusion; */
 }
 
 .card-temp{
@@ -33,12 +35,14 @@ body{
   padding-left: 20px;
   margin-top: 260px;
   font-size: 50px;
+  /* mix-blend-mode: exclusion; */
 }
 
 .card-desc{
   position: absolute;
   padding-left: 20px;
   margin-top: 320px;
+  /* mix-blend-mode: exclusion; */
 }
 
 @media screen and (max-width: 700px){

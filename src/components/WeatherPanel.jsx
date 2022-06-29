@@ -4,7 +4,7 @@ import Card from './Card';
 const WeatherPanel = () => {
 
     // Enter yout OpenWeather API here
-    let openWeatherApi = ''
+    let openWeatherApi = 'cf6dfe9efc1682d27c06de53e3233239'
     let openWeatherLang = 'en'
     let urlWeather = `https://api.openweathermap.org/data/2.5/weather?appid=${openWeatherApi}&lang=${openWeatherLang}`;
     let cityUrl = '&q=';
@@ -65,8 +65,15 @@ const WeatherPanel = () => {
         // How many images we get from the search
         let numberOfResults = 10
         let urlPexels = `https://api.pexels.com/v1/search?query=${loc}&per_page=${numberOfResults}&orientation=portrait`
-    
-        await fetch(urlPexels).then((response) => {
+
+        // Set header with Authorization token for pexels token
+        const defaultOptions = {
+            headers: {
+                'Authorization': process.env.REACT_APP_API_KEY_PEXELS,
+            },
+        };
+
+        await fetch(urlPexels, defaultOptions).then((response) => {
             if(!response.ok) throw {response}
             return response.json();
         }).then((pexelsData) => {     
@@ -78,7 +85,7 @@ const WeatherPanel = () => {
                 // If search returns 0 images, get a random one from the list
                 setImgCity(imgBg())
             }
-                
+
         }).catch(error => {
             console.log(error);
         });
