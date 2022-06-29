@@ -79,12 +79,10 @@ const WeatherPanel = () => {
             if(!response.ok) throw {response}
             return response.json();
         }).then((pexelsData) => {     
-            console.log(pexelsData);
             // If pexels has an image(length > 0), get a random image from the array of images
             if(pexelsData.photos.length > 0){
                 const randomNumber = Math.floor(Math.random() * (pexelsData.photos.length - 1));
                 setImgCity(pexelsData.photos[randomNumber].src.portrait)
-                console.log(pexelsData.photos[randomNumber].photographer);
                 setimgAuthor(pexelsData.photos[randomNumber].photographer)
                 seturlAuthor(pexelsData.photos[randomNumber].url)
             }else{
