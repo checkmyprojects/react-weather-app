@@ -33,8 +33,8 @@ It uses the OpenWeather API free plan.
   - **openWeatherLang** sets the language of the results.
   - **numberOfResults** defaults to max 10 results and gets a random image from those 10.
 - Configure your environment variables
-  - REACT_APP_API_KEY_PEXELS as your pexels api key
-  - REACT_APP_API_KEY_OPENWEATHER as your openweather api key
+  - process.env.REACT_APP_API_KEY_PEXELS as your pexels api key
+  - process.env.REACT_APP_API_KEY_OPENWEATHER as your openweather api key
 
 ## Lessons Learned:
 
