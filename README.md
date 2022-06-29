@@ -21,8 +21,9 @@ It uses the OpenWeather API free plan.
 
 - ~~I would like to display a picture of the city it displays the weather of, but i couldn't find a free API to do that~~. Done, it gets the image using Pexels API.
 
-- Make it change theme with local time (day / night).
+- ~~Add author name and link to original image~~. Done, now links to author or just to pexels if no image is found.
 
+- Make it change theme with local time (day / night).
 
 ## Install:
 
